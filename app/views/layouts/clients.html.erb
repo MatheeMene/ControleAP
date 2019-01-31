@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Lumino - Dashboard</title>
+
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag    'application' %>
+  <%= stylesheet_link_tag    'clients' %>
+	
+	<!--Custom Font-->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar-collapse"><span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span></button>
+				<p class="navbar-brand" href="#"><span>Cadastro</span>Prédio</p>
+			</div>
+		</div><!-- /.container-fluid -->
+	</nav>
+	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+		<div class="profile-sidebar">
+			<div class="profile-userpic">
+			<%= image_tag 'perfil.jpg', class:'img-responsive' %>
+			</div>
+			<div class="profile-usertitle">
+				<div class="profile-usertitle-name"> Greice </div>
+				<div class="profile-usertitle-status"><span class="indicator label-success"></span>Online</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="divider"></div>
+		<ul class="nav menu">
+			<li class="active">
+				<%= link_to clients_path do%>
+					<i class="fas fa-users"></i>
+					Clientes
+				<% end %>
+			</li>
+			<li>
+				<%= link_to destroy_user_session_path, method: :delete do %>
+					<i style="font-size:18px" class="fas fa-sign-out-alt"></i>
+					Sair
+				<% end %>
+			</li>
+		</ul>
+	</div><!--/.sidebar-->
+		
+	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+		<div class="row">
+			<div class="col-lg-12">
+        <%= yield %>
+			</div>
+		</div><!--/.row-->
+	</div>	<!--/.main-->
+
+	<!-- Footer -->
+	<footer class="page-footer font-small blue" style="position:absolute; bottom:0; width:100%;">	
+		<div class="py-3 col-sm-12">
+			<p class="back-link"> Lumino Theme By <a href="https://www.medialoot.com"> Medialoot </a></p>
+		</div>
+	</footer>
+  <!-- Footer -->
+
+  <%= javascript_include_tag 'application' %>
+  <%= javascript_include_tag 'clients' %>
+
+	<script>
+		window.onload = function () {
+	var chart1 = document.getElementById("line-chart").getContext("2d");
+	window.myLine = new Chart(chart1).Line(lineChartData, {
+	responsive: true,
+	scaleLineColor: "rgba(0,0,0,.2)",
+	scaleGridLineColor: "rgba(0,0,0,.05)",
+	scaleFontColor: "#c5c7cc"
+	});
+};
+	</script>
+		
+</body>
+</html>
+
+

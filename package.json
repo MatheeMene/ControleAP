@@ -1,0 +1,9 @@
+{
+  "name": "customer_manager",
+  "private": true,
+  "dependencies": {},
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Matheus Menegat <matheusmenegat@hotmail.com>",
+  "license": "MIT"
+}
