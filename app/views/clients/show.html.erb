@@ -35,7 +35,11 @@
   <%= number_to_currency_br(@client.iptu) %>
 </p>
 
-<%= link_to edit_client_path(@client), class:"btn btn-primary btn-circle" do %>
-  <i class="fas fa-edit"></i>
+<%= link_to edit_client_path(@client), class:"btn btn-primary" do %>
+  <i class="fas fa-edit"></i>Editar
 <% end %> |
-<%= link_to 'Back', clients_path %>
+
+<%= link_to clients_path, class:"btn btn-warning" do%>
+  <i class="fas fa-arrow-left"></i>Voltar
+<% end %>
+

@@ -34,13 +34,19 @@ a:hover {
   color: #f05f40;
 }
 
-h1,
 h2,
-h3,
+h3 {
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+
+h1,
 h4,
 h5,
 h6 {
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  color: white;
+  text-shadow: black 0.1em 0.1em 0.2em;
 }
 
 .bg-primary {
@@ -53,6 +59,7 @@ h6 {
 
 .text-faded {
   color: rgba(255, 255, 255, 0.7);
+  text-shadow: black 0.1em 0.1em 0.2em;
 }
 
 section {
