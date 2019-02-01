@@ -3,6 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.4.5'
 
+gem 'glyphicons-rails', '~> 0.1.2'
+# Tradução
+gem 'rails-i18n', '~> 5.1'
 # Font-awesome
 gem 'font-awesome-sass', '~> 5.6.1'
 # Segurança

@@ -1,39 +1,41 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Full name:</strong>
+  <strong>Nome Completo:</strong>
   <%= @client.full_name %>
 </p>
 
 <p>
-  <strong>Birth date:</strong>
-  <%= @client.birth_date %>
+  <strong>Data de Nascimento:</strong>
+  <%= data_br(@client.birth_date) %>
 </p>
 
 <p>
-  <strong>Job:</strong>
+  <strong>Profissão:</strong>
   <%= @client.job %>
 </p>
 
 <p>
-  <strong>Location init:</strong>
-  <%= @client.location_init %>
+  <strong>Início da Locação:</strong>
+  <%= data_br(@client.location_init) %>
 </p>
 
 <p>
-  <strong>Location value:</strong>
-  <%= @client.location_value %>
+  <strong>Valor da Locação:</strong>
+  <%= number_to_currency_br(@client.location_value) %>
 </p>
 
 <p>
-  <strong>Apto number:</strong>
+  <strong>Número do Apartamento:</strong>
   <%= @client.apto_number %>
 </p>
 
 <p>
   <strong>Iptu:</strong>
-  <%= @client.iptu %>
+  <%= number_to_currency_br(@client.iptu) %>
 </p>
 
-<%= link_to 'Edit', edit_client_path(@client) %> |
+<%= link_to edit_client_path(@client), class:"btn btn-primary btn-circle" do %>
+  <i class="fas fa-edit"></i>
+<% end %> |
 <%= link_to 'Back', clients_path %>

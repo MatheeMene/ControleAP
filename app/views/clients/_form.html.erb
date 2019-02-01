@@ -11,39 +11,40 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :full_name %>
-    <%= form.text_field :full_name %>
+    <%= form.text_field :full_name, class:"form-control", placeholder:"Ex: João" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :birth_date %>
-    <%= form.date_select :birth_date %>
+    <%= form.date_select :birth_date, class:"form-control", placeholder:"Ex: 15/05/2000" %>
   </div>
+    
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :job %>
-    <%= form.text_field :job %>
+    <%= form.text_field :job, class:"form-control", placeholder:"Ex: Programador" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :location_init %>
-    <%= form.date_select :location_init %>
+    <%= form.date_select :location_init, class:"form-control", placeholder:"Ex: 20/12/2018" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :location_value %>
-    <%= form.text_field :location_value %>
+    <%= form.text_field :location_value, class:"form-control", placeholder:"Ex: R$ 2000,00" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :apto_number %>
-    <%= form.number_field :apto_number %>
+    <%= form.number_field :apto_number, class:"form-control", placeholder:"Ex: 69" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :iptu %>
-    <%= form.text_field :iptu %>
+    <%= form.text_field :iptu, class:"form-control", placeholder:"Ex: R$ 1500,00" %>
   </div>
 
   <div class="actions">

@@ -1,0 +1,16 @@
+'pt-BR':
+  activerecord:
+    models:
+      client: Cliente
+    attributes:
+      client:
+        id:             Código
+        full_name:      Nome Completo
+        birth_date:     Data de Nascimento
+        job:            Profissão
+        location_init:  Início da Locação
+        location_value: Valor da Locação
+        apto_number:    Número do Apartamento
+        iptu:           Iptu
+        created_at:     Criado em
+        updated_at:     Adaptado em
