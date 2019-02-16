@@ -6,6 +6,16 @@
 </p>
 
 <p>
+  <strong>RG:</strong>
+  <%= @client.rg %>
+</p>
+
+<p>
+  <strong>CPF:</strong>
+  <%= number_to_currency_cpf(@client.cpf) %>
+</p>
+
+<p>
   <strong>Data de Nascimento:</strong>
   <%= data_br(@client.birth_date) %>
 </p>
