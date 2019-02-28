@@ -48,7 +48,7 @@
             <div class="service-box mt-5 mx-auto">
               <i class="fa fa-4x fa-gem text-primary mb-3 sr-icon-1"></i>
               <h3 class="mb-3">Proteja o precioso</h3>
-              <p class="text-muted mb-0">Mantenha os dados de clientes seguros com o nosso sitema.</p>
+              <p class="text-muted mb-0">Mantenha os dados de clientes seguros com o nosso sitema</p>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 text-center">
@@ -62,7 +62,7 @@
             <div class="service-box mt-5 mx-auto">
               <i class="fa fa-4x fa-code text-primary mb-3 sr-icon-3"></i>
               <h3 class="mb-3">Código limpo</h3>
-              <p class="text-muted mb-0">Programado em Ruby juntamente com seu framework Rails.</p>
+              <p class="text-muted mb-0">Programado em Ruby juntamente com seu framework Rails</p>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 text-center">
@@ -78,7 +78,37 @@
     
     <section class="bg-dark text-white">
       <div class="container text-center">
-        <h2 class="mb-4">Free Download at Start Bootstrap!</h2>
-        <a class="btn btn-light btn-xl sr-button" href="http://startbootstrap.com/template-overviews/creative/">Download Now!</a>
+        <h2 class="mb-4">Conheça mais no meu Github!</h2>
+        <a class="btn btn-light btn-xl sr-button" href="https://github.com/MatheeMene/">Visite já!</a>
       </div>
     </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading">Faça seu cadastro ou entre para começar!</h2>
+            <hr class="my-4">
+            <p class="mb-5">Fique a vontade para criar uma conta gratuita e utilizar do nosso sistema!</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 ml-auto text-center">
+          <%= link_to new_user_registration_path do %>
+            <i class="fa fa-user-plus fa-3x mb-3 sr-contact-1"></i>
+            </br>
+            Cadastrar
+          <% end %>
+          </div>
+          <div class="col-lg-4 mr-auto text-center">
+          <%= link_to new_user_session_path do %>
+            <i class="fa fa-sign-in-alt fa-3x mb-3 sr-contact-2"></i>
+            </br>
+            Entrar
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    

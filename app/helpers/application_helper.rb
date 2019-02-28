@@ -6,8 +6,4 @@ module ApplicationHelper
   def number_to_currency_br(number)
     number_to_currency(number, :unit => "R$ ", :separator => ",", :delimiter => ".")
   end
-
-  def number_to_currency_cpf(number)
-    number_to_currency(number, :separator => "-", :delimiter => ".")
-  end
 end

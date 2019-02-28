@@ -10,8 +10,7 @@
     <tr>
       <th scope="col">#</th>
       <th scope="col">Nome Completo</th>
-      <th scope="col">Data de Nascimento</th>
-      <th scope="col">Profissão/</th>
+      <th scope="col">Profissão</th>
       <th scope="col">Início da Locação</th>
       <th scope="col">Valor da Locação</th>
       <th scope="col">Número do Apartamento</th>
@@ -25,13 +24,12 @@
       <tr>
         <td scope="row"><%= client.id %></td>
         <td scope="row"><%= client.full_name %></td>
-        <td scope="row"><%= data_br(client.birth_date) %></td>
         <td scope="row"><%= client.job %></td>
         <td scope="row"><%= data_br(client.location_init) %></td>
         <td scope="row"><%= number_to_currency_br(client.location_value) %></td>
         <td scope="row"><%= client.apto_number %></td>
         <td scope="row"><%= number_to_currency_br(client.iptu) %></td>
-        <td style="width: 145px">
+        <td style="width: 150px">
         <%= link_to client, class:"btn btn-info" do %>
           <i class="fas fa-eye"></i>
         <% end %>
@@ -52,4 +50,13 @@
   <%= link_to new_client_path, class:"btn btn-success" do %>
     <i class="fas fa-user-plus"></i> Novo
   <% end %>
+
+
+<!-- Footer -->
+<footer class="page-footer font-small special-color-dark pt-4">
+  <div class="footer-copyright text-center py-3">
+    <p class="back-link"> Lumino Theme By <a href="https://www.medialoot.com"> Medialoot </a></p>
+  </div>
+</footer>
+<!-- Footer -->
 

@@ -2,7 +2,6 @@
   <% if client.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(client.errors.count, "error") %> prohibited this client from being saved:</h2>
-
       <ul>
       <% client.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -11,52 +10,57 @@
     </div>
   <% end %>
 
-  <div class="form-group">
-    <%= form.label :full_name %>
-    <%= form.text_field :full_name, class:"form-control", placeholder:"Ex: João" %>
-  </div>
+  <div class="row">
+    <div class="form-group col-md-6">
+      <%= form.label :full_name %>
+      <%= form.text_field :full_name, class:"form-control", placeholder:"Ex: João" %>
+    </div>
 
-  <div class="form-group">
-    <%= form.label :rg %>
-    <%= form.text_field :rg, class:"form-control", placeholder:"Ex: 9999999999" %>
-  </div>
+    <div class="form-group col-md-6">
+      <%= form.label :rg %>
+      <%= form.text_field :rg, class:"form-control", placeholder:"Ex: 9999999999" %>
+    </div>
 
-  <div class="form-group">
-    <%= form.label :cpf %>
-    <%= form.text_field :cpf, class:"form-control", placeholder:"Ex: 123.456.789-99" %>
-  </div>
+    <div class="form-group col-md-6">
+      <%= form.label :location_init %>
+      <%= form.date_select :location_init, class:"form-control", placeholder:"Ex: 20/12/2018", :start_year => Date.current.year, :end_year => 2015 %>
+    </div>
 
-  <div class="form-group">
-    <%= form.label :birth_date %>
-    <%= form.date_select :birth_date, class:"form-control", type:"date", placeholder:"Ex: 15/05/2000", :start_year => Date.current.year, :end_year => 1950 %>
-  </div>
-    
-  <div class="form-group">
-    <%= form.label :job %>
-    <%= form.text_field :job, class:"form-control", placeholder:"Ex: Programador" %>
-  </div>
+    <div class="form-group col-md-6">
+      <%= form.label :birth_date %>
+      <%= form.date_select :birth_date, class:"form-control", type:"date", placeholder:"Ex: 15/05/2000", :start_year => Date.current.year, :end_year => 1950 %>
+    </div>
+      
+    <div class="form-group col-md-6">
+      <%= form.label :job %>
+      <%= form.text_field :job, class:"form-control", placeholder:"Ex: Programador" %>
+    </div>
 
-  <div class="form-group">
-    <%= form.label :location_init %>
-    <%= form.date_select :location_init, class:"form-control", placeholder:"Ex: 20/12/2018", :start_year => Date.current.year, :end_year => 2015 %>
-  </div>
+    <div class="form-group col-md-6">
+      <%= form.label :cpf %>
+      <%= form.text_field :cpf, class:"form-control", placeholder:"Ex: 123.456.789-99" %>
+    </div>
 
-  <div class="form-group">
-    <%= form.label :location_value %>
-    <%= form.text_field :location_value, class:"form-control", placeholder:"Ex: R$ 2000,00" %>
-  </div>
+    <div class="form-group col-md-6">
+      <%= form.label :location_value %>
+      <%= form.text_field :location_value, class:"form-control", placeholder:"Ex: R$ 2000,00" %>
+    </div>
 
-  <div class="form-group">
-    <%= form.label :apto_number %>
-    <%= form.number_field :apto_number, class:"form-control", placeholder:"Ex: 69" %>
-  </div>
+    <div class="form-group col-md-6">
+      <%= form.label :apto_number %>
+      <%= form.number_field :apto_number, class:"form-control", placeholder:"Ex: 69" %>
+    </div>
 
-  <div class="form-group">
-    <%= form.label :iptu %>
-    <%= form.text_field :iptu, class:"form-control", placeholder:"Ex: R$ 1500,00" %>
+    <div class="form-group col-md-6">
+      <%= form.label :iptu %>
+      <%= form.text_field :iptu, class:"form-control", placeholder:"Ex: R$ 1500,00" %>
+    </div>
   </div>
 
   <div class="actions">
     <%= form.submit nil, class:"btn btn-success" %>
   </div>
+ 
 <% end %>
+
+
