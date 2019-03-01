@@ -1,50 +1,82 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Nome Completo:</strong>
-  <%= @client.full_name %>
-</p>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item"><a href="#">Novo</a></li>
+    <li class="breadcrumb-item"><a href="#">Editar</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Visualizar</li>
+  </ol>
+</nav>
 
-<p>
-  <strong>RG:</strong>
-  <%= @client.rg %>
-</p>
+  <h1>Visualizar Cliente</h1>
 
-<p>
-  <strong>CPF:</strong>
-  <%= @client.cpf %>
-</p>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <div class="col-md-6">
+      <p>
+        <strong>Nome Completo:</strong>
+        <%= @client.full_name %>
+      </p>
+    </div>
 
-<p>
-  <strong>Data de Nascimento:</strong>
-  <%= data_br(@client.birth_date) %>
-</p>
+    <div class="col-md-6">
+      <p>
+        <strong>RG:</strong>
+        <%= @client.rg %>
+      </p>
+    </div>
 
-<p>
-  <strong>Profissão:</strong>
-  <%= @client.job %>
-</p>
+    <div class="col-md-6">
+      <p>
+        <strong>CPF:</strong>
+        <%= @client.cpf %>
+      </p>
+    </div>
 
-<p>
-  <strong>Início da Locação:</strong>
-  <%= data_br(@client.location_init) %>
-</p>
+    <div class="col-md-6">
+      <p>
+        <strong>Data de Nascimento:</strong>
+        <%= data_br(@client.birth_date) %>
+      </p>
+    </div>
 
-<p>
-  <strong>Valor da Locação:</strong>
-  <%= number_to_currency_br(@client.location_value) %>
-</p>
+    <div class="col-md-6">
+      <p>
+        <strong>Profissão:</strong>
+        <%= @client.job %>
+      </p>
+    </div>
 
-<p>
-  <strong>Número do Apartamento:</strong>
-  <%= @client.apto_number %>
-</p>
+    <div class="col-md-6">
+      <p>
+        <strong>Início da Locação:</strong>
+        <%= data_br(@client.location_init) %>
+      </p>
+    </div>
 
-<p>
-  <strong>Iptu:</strong>
-  <%= number_to_currency_br(@client.iptu) %>
-</p>
+    <div class="col-md-6">
+      <p>
+        <strong>Valor da Locação:</strong>
+        <%= number_to_currency_br(@client.location_value) %>
+      </p>
+   </div>
 
+    <div class="col-md-6">
+      <p>
+        <strong>Número do Apartamento:</strong>
+        <%= @client.apto_number %>
+      </p>
+   </div>
+
+    <div class="col-md-6">
+      <p>
+        <strong>Iptu:</strong>
+        <%= number_to_currency_br(@client.iptu) %>
+      </p>
+    </div>  
+ </div>
+</div>
 
 <%= link_to edit_client_path(@client), class:"btn btn-primary" do %>
   <i class="fas fa-edit"></i>Editar
@@ -53,7 +85,6 @@
 <%= link_to clients_path, class:"btn btn-warning" do%>
   <i class="fas fa-arrow-left"></i>Voltar
 <% end %>
-
 
 <!-- Footer -->
 <footer class="page-footer font-small special-color-dark pt-4 navbar-fixed-bottom">

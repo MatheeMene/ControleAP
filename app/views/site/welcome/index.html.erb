@@ -1,125 +1,124 @@
 
 <header class="masthead text-center text-white d-flex">
-      <div class="container my-auto">
-        <div class="row">
-          <div class="col-lg-10 mx-auto">
-            <h1 class="text-uppercase">
-              <strong>Seu gerenciador de clientes favorito</strong>
-            </h1>
-            <hr>
-          </div>
-          <div class="col-lg-8 mx-auto">
-            <p class="text-faded mb-5">Perfeito pra você que precisa de uma ferramenta fácil e prática para gererir seus negócios!</p>
-            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Leia mais!</a>
-          </div>
-        </div>
+  <div class="container my-auto">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <h1 class="text-uppercase">
+          <strong>Seu gerenciador de clientes favorito</strong>
+        </h1>
+        <hr>
       </div>
-    </header>
+      <div class="col-lg-8 mx-auto">
+        <p class="text-faded mb-5">Perfeito pra você que precisa de uma ferramenta fácil e prática para gererir seus negócios!</p>
+        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Leia mais!</a>
+      </div>
+    </div>
+  </div>
+</header>
 
-    <section class="bg-primary" id="about">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading text-white">É só clicar no botão!</h2>
-            <hr class="light my-4">
-            <p class="text-faded mb-4">Basta apenas clicar no botão para fazer o login e começar a utilizar a ferramenta!</p>
-            <% if current_user && current_user.admin %>
-              <%= link_to 'Comece agora!', clients_path, class:"btn btn-light btn-xl js-scroll-trigger" %>
-            <% else %>
-              <%= link_to 'Comece agora!', site_welcome_index_path, class:"btn btn-light btn-xl js-scroll-trigger" %>
-            <% end %>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="services">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading">Estamos a seu serviço!</h2>
-            <hr class="my-4">
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box mt-5 mx-auto">
-              <i class="fa fa-4x fa-gem text-primary mb-3 sr-icon-1"></i>
-              <h3 class="mb-3">Proteja o precioso</h3>
-              <p class="text-muted mb-0">Mantenha os dados de clientes seguros com o nosso sitema</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box mt-5 mx-auto">
-              <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icon-2"></i>
-              <h3 class="mb-3">Velocidade a favor</h3>
-              <p class="text-muted mb-0">Nosso sitema é programado para proporcionar agilidade</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box mt-5 mx-auto">
-              <i class="fa fa-4x fa-code text-primary mb-3 sr-icon-3"></i>
-              <h3 class="mb-3">Código limpo</h3>
-              <p class="text-muted mb-0">Programado em Ruby juntamente com seu framework Rails</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box mt-5 mx-auto">
-              <i class="fa fa-4x fa-heart text-primary mb-3 sr-icon-4"></i>
-              <h3 class="mb-3">Feito com amor</h3>
-              <p class="text-muted mb-0">Cada linha de código escrita foi pensando em você</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <section class="bg-dark text-white">
-      <div class="container text-center">
-        <h2 class="mb-4">Conheça mais no meu Github!</h2>
-        <a class="btn btn-light btn-xl sr-button" href="https://github.com/MatheeMene/">Visite já!</a>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading">Faça seu cadastro ou entre para começar!</h2>
-            <hr class="my-4">
-            <p class="mb-5">Fique a vontade para criar uma conta gratuita e utilizar do nosso sistema!</p>
-          </div>
-        </div>
-        <div class="row">
-        <% unless current_user %>
-          <div class="col-lg-4 ml-auto text-center">
-          <%= link_to new_user_registration_path do %>
-            <i class="fa fa-user-plus fa-3x mb-3 sr-contact-1"></i>
-            </br>
-            Cadastrar
-          <% end %>
-          </div>
-          <div class="col-lg-4 mr-auto text-center">
-          <%= link_to new_user_session_path do %>
-            <i class="fa fa-sign-in-alt fa-3x mb-3 sr-contact-2"></i>
-            </br>
-            Entrar
-          <% end %>
-          <% else %>
-          <div class="col-lg-12 ml-auto text-center">
-          <%= link_to destroy_user_session_path, :method=>'delete' do %>
-            <i class="fa fa-sign-out-alt fa-3x mb-3 sr-contact-1"></i>
-            </br>
-            Sair
-            </div>
-          <% end %>
+<section class="bg-primary" id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto text-center">
+        <h2 class="section-heading text-white">É só clicar no botão!</h2>
+        <hr class="light my-4">
+        <p class="text-faded mb-4">Basta apenas clicar no botão para fazer o login e começar a utilizar a ferramenta!</p>
+        <% if current_user && current_user.admin %>
+          <%= link_to 'Comece agora!', clients_path, class:"btn btn-light btn-xl js-scroll-trigger" %>
+        <% else %>
+          <%= link_to 'Comece agora!', site_welcome_index_path, class:"btn btn-light btn-xl js-scroll-trigger" %>
         <% end %>
-          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading">Estamos a seu serviço!</h2>
+        <hr class="my-4">
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-6 text-center">
+        <div class="service-box mt-5 mx-auto">
+          <i class="fa fa-4x fa-gem text-primary mb-3 sr-icon-1"></i>
+          <h3 class="mb-3">Proteja o precioso</h3>
+          <p class="text-muted mb-0">Mantenha os dados de clientes seguros com o nosso sitema</p>
         </div>
       </div>
-    </section>
-    <i class=""></i>
+      <div class="col-lg-3 col-md-6 text-center">
+        <div class="service-box mt-5 mx-auto">
+          <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icon-2"></i>
+          <h3 class="mb-3">Velocidade a favor</h3>
+          <p class="text-muted mb-0">Nosso sitema é programado para proporcionar agilidade</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 text-center">
+        <div class="service-box mt-5 mx-auto">
+          <i class="fa fa-4x fa-code text-primary mb-3 sr-icon-3"></i>
+          <h3 class="mb-3">Código limpo</h3>
+          <p class="text-muted mb-0">Programado em Ruby juntamente com seu framework Rails</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 text-center">
+        <div class="service-box mt-5 mx-auto">
+          <i class="fa fa-4x fa-heart text-primary mb-3 sr-icon-4"></i>
+          <h3 class="mb-3">Feito com amor</h3>
+          <p class="text-muted mb-0">Cada linha de código escrita foi pensando em você</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    
+<section class="bg-dark text-white">
+  <div class="container text-center">
+    <h2 class="mb-4">Conheça mais no meu Github!</h2>
+    <a class="btn btn-light btn-xl sr-button" href="https://github.com/MatheeMene/">Visite já!</a>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto text-center">
+        <h2 class="section-heading">Faça seu cadastro ou entre para começar!</h2>
+        <hr class="my-4">
+        <p class="mb-5">Fique a vontade para criar uma conta gratuita e utilizar do nosso sistema!</p>
+      </div>
+    </div>
+    <div class="row">
+    <% unless current_user %>
+      <div class="col-lg-4 ml-auto text-center">
+      <%= link_to new_user_registration_path do %>
+        <i class="fa fa-user-plus fa-3x mb-3 sr-contact-1"></i>
+        </br>
+        Cadastrar
+      <% end %>
+      </div>
+      <div class="col-lg-4 mr-auto text-center">
+      <%= link_to new_user_session_path do %>
+        <i class="fa fa-sign-in-alt fa-3x mb-3 sr-contact-2"></i>
+        </br>
+        Entrar
+      <% end %>
+    <% else %>
+      <div class="col-lg-12 ml-auto text-center">
+      <%= link_to destroy_user_session_path, :method=>'delete' do %>
+        <i class="fa fa-sign-out-alt fa-3x mb-3 sr-contact-1"></i>
+        </br>
+        Sair
+      </div>
+      <% end %>
+    <% end %>
+    </div>
+  </div>
+</section>
+
 
     
