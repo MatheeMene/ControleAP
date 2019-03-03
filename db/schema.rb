@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_28_132918) do
+ActiveRecord::Schema.define(version: 2019_03_03_162422) do
 
   create_table "clients", force: :cascade do |t|
     t.string "full_name"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 2019_02_28_132918) do
     t.datetime "updated_at", null: false
     t.string "cpf"
     t.string "rg"
+    t.string "igpm"
   end
 
   create_table "users", force: :cascade do |t|
