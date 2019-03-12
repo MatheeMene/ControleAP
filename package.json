@@ -2,6 +2,7 @@
   "name": "customer_manager",
   "private": true,
   "dependencies": {
+    "@rails/webpacker": "^4.0.2",
     "bootstrap": "^4.3.1",
     "jquery": "^3.3.1",
     "jquery-easing": "^0.0.1",
@@ -12,5 +13,8 @@
   "main": "index.js",
   "author": "Matheus Menegat <matheusmenegat@hotmail.com>",
   "license": "MIT",
-  "repository": "https://github.com/MatheeMene/ControleAP.git"
+  "repository": "https://github.com/MatheeMene/ControleAP.git",
+  "devDependencies": {
+    "webpack-dev-server": "^3.2.1"
+  }
 }
